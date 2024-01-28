@@ -1,0 +1,82 @@
+virtual fuctions help u override methods in subclasses Example : A class B subclass 
+    - Vtable
+	______________________________________________________________
+	- what is dynamic dispatch 
+		in this context, dispatching just refers to the action of fidning the right function to call .
+		in the general case, when you define a method inside a class the compiler will remember its definition 
+		and execute it every time a call to that method is encountered.
+	
+----------------------------------------------------------------------------------------------------------------------------
+		#include <iostream>
+
+		class A
+		{
+		public:
+		  void foo();
+		};
+
+		void A::foo()
+		{
+		  std::cout << "Hello this is foo" << std::endl;
+		}
+-------------------------------------------------------------------------------------------------------------------------------
+		
+		Here, the compiler will create a routine for "foo()" and remember its adress.This routine will be executed 
+		every time the compiler finds a call to "foo()" on an instance of A. Need to keep this in mind, that the only "one" routine 
+		exits per class method, and is shared by all instances of the class. This process is known as static dispatch
+		or early binding: the compiler knows which routine to execute during compilation.
+	________________________________________________________________________________________
+
+	__________________________________________________________________________________
+	- There are cases where it is not possible for the compiler to know which routine to execute at compile time. this is the case,
+	  for instance, when we declare virtual function:
+
+-------------------------------------------------------------------------------------------------------------------------------
+		#include <iostream>
+
+		class B
+		{
+		public:
+		  virtual void bar();
+		  virtual void qux();
+		};
+
+		void B::bar()
+		{
+		  std::cout << "This is B's implementation of bar" << std::endl;
+		}
+
+		void B::qux()
+		{
+		  std::cout << "This is B's implementation of qux" << std::endl;
+		}
+-------------------------------------------------------------------------------------------------------------------------------
+	   The thing about virtual function is that they can be overriten by subclasses:
+-------------------------------------------------------------------------------------------------------------------------------
+		class C : public B
+		{
+		public:
+		  void bar() override;
+		};
+
+		void C::bar()
+		{
+		  std::cout << "This is C's implementation of bar" << std::endl;
+		}
+
+		int main () {
+
+			B* b = new C();
+			b->bar();
+		}
+
+		output: This is C's implementation of bar 
+-------------------------------------------------------------------------------------------------------------------------------
+
+	   If we use static dispatch as above, the call "b->bar()" would execute "B::bar()", since (from the point of view of the compiler)
+	   b points to an object of type B. This would be horribly wrong, off course, because b actually points to an object of type C and 
+	   "C::bar()" should be called instead. 
+
+	   Virtual functions can be redefined in subclasses, calls via pointers ( or references) to a base type can not be dispacthed at compile
+	   time. The compiler has to find the right function definition(i.e the most specific one) at runtime. This process is called dynamic 
+	   dispatch or late method binding.

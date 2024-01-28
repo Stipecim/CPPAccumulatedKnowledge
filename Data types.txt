@@ -1,0 +1,18 @@
+Data types
+Depending on what data you need to store there are several kind of built-in data types. These are ofthen called fundemantal
+data types or primitives.
+char 1 byte integer or character
+short 2 bytes
+int 4 bytes integer
+long 4 bytes
+float 4 bytes
+double 8 bytes Floating-point number
+long double 8 bytes
+bool 1 byte Boolean value
+
+In C++, the exact size and range of the data types are not fixed. Instead they are dependent on the system for which the 
+program is compiled. A byte in C++ is the minimum addressable unit of memory, which is garanteed to be at least 8 bits, but
+might also be 16 or 32 bits depending on the system, By definition, a char in c++ is 1 byte in size. Furthermore, the int type
+will have the same size as the processors's word size, so for a 32-bit system the integer will be 32 bits in size. 
+Each integer type in the table must also be at least as large as the one proceding it. The same applies to floating-point
+types where each one must provide at least as musch precision as the preceding one.

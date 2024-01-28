@@ -1,0 +1,2 @@
+Pointer to pointer stores a memory adress of an pointer that points to the value, this way wehen the address stored in the
+first pointer changes, the second ponter can follow that change.

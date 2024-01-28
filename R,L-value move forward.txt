@@ -1,0 +1,15 @@
+The main difference between "std::move" and "std::forward" is the type of reference they return.
+
+"std::move" is function themplate that is used to convert and lvalue into an rvalue. It is tipically used to explicitly move
+resources from one object to another, rather than copying them. When called on an lvalue, std::move returns and rvalue
+reference to the original object, indicating that the objects resources can be moved or consumed.
+
+On the other hand, "std::forward" is a function template that is used to forward an argument to another function or 
+constructor, preserving its original lvalue or rvalue status. It is tiypically used in conjunction with template function 
+overloading and perfect forwarding. When called on an lvalue, "std::forward" returns a reference to the original object, so
+that the called function or constructor can acess the original object. When called on an rvalue, std::forward returns an rvalue reference to the original
+object, so that the called function or consturctor can move or consume the original object.
+
+In summary, "std::move" is used to explicitly move resources from an object and it returns an rvalue reference, while 
+"std::forward" is used to perserve the original value category of an argument and it returns either lvalue or rvalue 
+reference depending on the original value category of the argument.

@@ -1,0 +1,11 @@
+Each object gets its own copy of the data member.
+All-access the same function definition as present in the code segment.
+
+Meaning each object gets its own copy of data members and all objects share a single copy of member functions.
+Only one copy of member function exists and is used by multiple objects, this is how proper data members are accessed and
+updated. The compiler supplies an implicit pointer along with the names of the function as "this". "this" pointer is
+passed as a hidden argument to all non-static member functions calls ( all non-static member functions
+can only access static variables in class and class object it doesn't need to be initialised. Can be called with 
+class name::static_function() ) and is available as a local variable withinn the body of all non-static functions.
+For class X, the type of this poiner is X*. Also, if a member function of class X is declared as const, then the type 
+of this pointer is const X*

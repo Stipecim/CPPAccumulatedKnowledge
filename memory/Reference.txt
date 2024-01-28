@@ -1,0 +1,5 @@
+References allow a programmer to create a new name for a variable. They provide, safer and les powerful alternative to pointers.
+A reference is declared in the same way as regular variable, except that ac ampersand is appended between the data type and 
+the variable name. Furthermore, at the same time as the reference is declared it must be initialized with a variable of the 
+specified type. Once the reference has been assigned, or seated, it can never be reseated to another variable.
+The reference has in effect to become an alias for the variable and can be usesd as though it was the original variable.

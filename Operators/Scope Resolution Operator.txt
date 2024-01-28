@@ -1,0 +1,15 @@
+::The scope resolution operator is used to reference the global varibale or member function that is out of scope.
+Therefore, we use the scope resolution operator to acces the hidden varible or function of a program.
+
+Example, when the global and local variable or function has the same name in a program, and when we call the vraiable, by 
+default it only accesses the inner or local variable without calling the global variable.
+
+USES OF THE SCOPE RESOULTION OPERATOR 
+
+1. it is used to access the hidden variables or member functions of a program.
+
+2. It defines the member function outside of the class using the scope resolution.
+
+3. It is used to access the static variable and static function of a class.
+
+4. The scope resolution operator is used to override function in the Ineritance.

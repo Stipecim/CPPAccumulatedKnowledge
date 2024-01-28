@@ -1,0 +1,2 @@
+#include is directive that effectively replaces the line with everything in the specified header before the file is compiled
+into an executable.

@@ -1,0 +1,40 @@
+is a keyword that can be used to indicate that a function or variable is a compile-time constant. This means that its 
+value can be determined at compile time, rather than at runtime. This allows the compiler to make certain optimizations
+and also allows for the use of the variable or function in contexts where only a compile-time constant is allowed. such
+as in the size of an array.
+
+When a function or variable is marked as "constexpr", it means that the compiler GUARANTIES that the function or variable
+can be evaluated at compile-time, and can be used in constant expressions and template arguments.
+
+A "constexpr" function is guaranteed to be evaluated at compile-time if it meets certain requiremnts, such as // 1a.
+
+the function must be declared as "constexpr"
+the function must contain only a single return statement
+the return statement must be a constant expression 
+the function must not contain any loops or switch statements
+the function must not contain any mutlable variables
+
+if a "constexpr" function meets these requirements, then the compiler is guaranteed that it can evaluate the function at
+compile-time. THis means that the function can be used in contexts where only a constant value is allowed, such as in the
+size of an array or as a template argument.
+
+A "constexpr" variable has similar to functions, its guaranteed to be evlauated at compile-time if it meets certain    
+requiremtns, such as:			// 1b.
+
+the variable must be initialized with a constant expression
+the type of the variable must be a literal type.
+
+
+So the difference between "const" and "constexpr" that const does not completely guarantee that is going to be 
+evaluated during compile-time while "constexpr" guarantees that it is going to be evaluated during compile-time 
+under certain conditions for variables read (1b.) for functions read (1a.)
+
+const int number = 2; - it will be evaluated during compile-time.
+const int number = getNumber(); - wont be evaluated during compile-time only during run time 
+
+const value doesn't guarantee compile-time evaluation
+
+constexpr int number = 2; - will get evaluated during compile-time
+constexpr int number = getNumber(); - will get evaluated during compile-time 
+
+

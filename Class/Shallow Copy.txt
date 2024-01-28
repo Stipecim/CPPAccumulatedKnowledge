@@ -1,0 +1,7 @@
+In shallow copy, an object is created by simply copying the data of all variables of the original object. That works well
+if non of the variables of the object are defined in the heap section of memory.If some variables are dynamically allocated
+memory from heap section, then the copied object variable will also reference the same memory location.
+
+This will create ambiguity and run-time errors, dangling ponter. Since both objects will reference to the same memory
+location, then change made by one will reflect those change in another object aswell. Since we wanted to create a replica
+of the object, this purpose will not be filled by Shallow Copy.

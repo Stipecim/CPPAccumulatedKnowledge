@@ -1,0 +1,11 @@
+In C++, the "noexcept" keyword can be used to indicate that a function or a constructor is guaranteed to not throw any 
+exeptions. It is used as a function specifier, like "const" or "override".
+
+When a function is marked as "noexcept", the compiler can generate more efficent code, as it knows that it does not have
+to handle any exceptions that may be thrown by the function. Additionaly, when a function is marked as "noexcept", it 
+allows for certain operations, such as move constructors, to be called even in the presence of potentially throwing
+functions, which would not be possible otherwise.
+
+It is important to note that a function marked as "noexcept" can still return an error code, or set an error flag,
+but it cannot throw an exception. If a function marked as noexcept throws an exception, the program will terminate 
+immediately.

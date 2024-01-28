@@ -1,0 +1,12 @@
+Lvalue and rvalues are fundemental to c++ exepressions. Put simply, an lvalue is an object reference and an rvalue is a vlaue.
+the fifference between lvalues and rvalues play a role in the writing and understanding of expressions.
+
+An lvalue is an expression that yields an object reference, such as a variable name, an arrry subscript reference, a 
+dereferenced pointer, or a function call that returns reference. An lvalue always has a defiend region of storage, so you can 
+take its adress.
+
+An rvalue is an expression that is not an lvalue. Examples of rvalues include literals, the results of most operator, and 
+function calls that return noreferencess. An rvalue does not neccessariliy have any storage associated with.
+
+A function is an Lvalue, but he only uses for it are use it in calling the function, or determining the functions adress.
+Most of hte time the term lvalue means object lvalue.

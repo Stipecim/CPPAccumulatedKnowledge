@@ -1,0 +1,5 @@
+templates are a mechanism in C++ that allows you to write code tat can work with any data type. A template is a blueprint 
+of a function or a class that contains placeholders called template parameters. WHen a template is instantiated, the 
+compiler generates a new version of the template for each set of template arguments by replacing the template parameters with 
+actual data types and this process is called template instantiation. This way the same code can be used for multiple data 
+types and the specialized version of code is generated for each data type used.

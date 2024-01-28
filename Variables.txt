@@ -1,0 +1,9 @@
+Variables in C++ may be declared both globally and locally. A global Variable is declared outside of any code block
+and will be accessible from anywhere after it has been declared, even in other source file in the same project.
+Difference between local wariable and gloabl is that global variable will remain allocated for duration of the program, while
+local variable will be destroyed when its function has finished executing.
+
+DEFAULT VALUES
+Global variables in C++ are automatically initialized to zero. Local variables however do not have this adventage,
+Instead, they will contain whatever garbage is left in that memory location. It is therefore a good idea to always give your
+local variables an initial value when they are decalared.

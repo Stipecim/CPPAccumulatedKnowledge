@@ -1,0 +1,2 @@
+Arrays can be made multi-dimensional by adding more sets of square brackets. As with single-dimensional array, they can 
+either be filled in one at time or all at one during the declaration.

@@ -1,0 +1,14 @@
+Overhead from Calling a function depends on compiler settings and the way it optimises code. Some functions are inlined.
+Others are not, It usually depends on wheter you'are optimiszing for size or speed.
+
+Generally, calling function cause delay for two reasons:
+
+- The program needs to hook to some random location in memory where your function code starts. To do this it needs to save the
+  current cursor position into a stack so it know where to return. This process consumes more than one CPU cycle.
+
+- Depending on your CPU architecture, there may be a pipleline, which fetches the next few instruction from memory into CPU
+  chace in parallel with your current instruction execution. This is to speed up execution speed. When you call a function
+  the cursor hooks to a completely different address and all the chached instructions are flushed from the pipline. This
+  causes further delays
+
+

@@ -1,0 +1,7 @@
+Static outside of class means that linkage is gonna be internal it is gonna be visible in that one translation unit.
+Static in class means that variable is going to share memory with all instances of the class, out of all instances 
+there is going to be only one instance of that variable.
+When static value is declared inside function, the value of the variable is preserved.
+
+	
+	

@@ -1,0 +1,2 @@
+A pointer should be set to zero when it is now assigned to avalid address. Such a pointer is called a null pointer.
+Doing this will allow you to check whether the pointer can be safely dereferenced, because a valid pointer will never be zero.

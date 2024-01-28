@@ -1,0 +1,2 @@
+<iostream> is header that provides input and output functionality for the program, and is one of the standard libraries thet 
+with all c++ compilers.

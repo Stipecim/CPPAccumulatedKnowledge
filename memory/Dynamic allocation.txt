@@ -1,0 +1,8 @@
+One of the main usages of pointers is to allocate maemory during run time - so called dynamic allocation.
+Programs have only had as much memory avaliable as has been declared for the variables at compile-time.
+This is refered as static allocation. This operator allows for dynamic allocation of memory, which can only be accessed 
+trough pointers. The "new" operator takes either a primitive data type or an object as its argument, and it will return 
+a pointer to the allocated memory.
+
+When when memory was allocated on heap memory is not released automatically when not used it has to be done manually 
+thats why we use " delete "

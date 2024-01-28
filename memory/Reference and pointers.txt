@@ -1,0 +1,4 @@
+A reference is similar to a pointer that always points to the same thing. However, while a pointer is variable that points 
+to another variable, a reference is only an alias and does not have an ddress of its own. Generally, whenever a pointer does 
+not need to ve reassigned a reference should be used instead, because a reference is safer than a pointer since it must 
+refer to a variable. This means that there is no need to check if a reference refers to null, as should be done with pointers.

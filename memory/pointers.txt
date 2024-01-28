@@ -1,0 +1,3 @@
+A pointer is a variable that contains the memory adress of anotoher varialbe, called the pontiee.
+Pointers are declared as any other variable, execept than an asterix " * " is placed between the data type and the pointer's name.
+The data type used determines what type of memory it will point to.

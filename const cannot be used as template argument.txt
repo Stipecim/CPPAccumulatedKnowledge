@@ -1,0 +1,7 @@
+A "const" variable cannot be used as a template argument because its value is not guaranteed to be known at compile-time
+
+When a template is initialised, the compiler generates a new version of the template for each set of template arguments.
+These new versions of the tamplate are created during compilation, so the values of the tempalte arguments must be known 
+at compile-time.
+
+thats why we use constexpr

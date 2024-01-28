@@ -1,0 +1,2 @@
+The bitwise operator can manipulate individual bits inside an intereg. The "bitwise or " operator " | " makes the resaulting 
+bit 1 if the bits are set on either side of the operator.

@@ -1,0 +1,6 @@
+class type(Student) of object ( s1("Jhon", 10) )
+class type(Student) of object (s2 = s1) 
+
+When s2 is being constructed, the default copy contructor for Student will be supplied by the C++ compiler whenever there's
+a missing user-defined copy constructor. The default copy constructor will copy each attribute of the class as is(this 
+is refered as shallow copy). Which means, both s1.name and s2.name point to the same C-string.

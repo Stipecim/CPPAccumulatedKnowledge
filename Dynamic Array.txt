@@ -1,0 +1,16 @@
+Because the array above are made up of static (non-dynamic) memory, their size must be determined before execution.
+Therefore, the size needs to be a constant value. In order to create an array with a size that is not known until run-time
+you need to use dynamic memory, which is allocated with the new keyword and must be assigned to a pointer or reference.
+
+Any array in c++ is actually a pointer to the first element in the array. 
+
+Keep in mind that just as with another pointer it is possible to exceed the vaild range of an array. It is therefore important
+to keep track of the arrays length. To determine the length of a statically allocated array you can use the sizeof operator.
+				       
+		   in bytes  divide  4bytes - Which is an integer
+int length = sizeof(myArray) / sizeof(int); //
+
+This method cannot be used for dynamically allocated arrays.The only way to deterement the size of such an array is trough
+the variable in its allocation.
+
+also remember to delete !! 

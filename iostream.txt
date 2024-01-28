@@ -1,0 +1,4 @@
+<iostream> is header that provides input and output functionality for the program, and is one of the standard libraries thet 
+with all c++ compilers.
+With iostream included you gain access to several new functions. These are all located in the standard namespace called std,
+which you can examine by using a double colon, also known the scope resolution operator:: . 

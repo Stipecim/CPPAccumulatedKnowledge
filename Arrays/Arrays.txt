@@ -1,0 +1,3 @@
+An array is a data structure used for storing a collection of values that all have same data type.
+The default values for these elements are the same as for variable, elements in global arrays are initialised to their default
+values and elements in local arrays remain uninitialized.

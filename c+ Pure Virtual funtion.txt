@@ -1,0 +1,2 @@
+Pure virtual function or interface is function that allowes us to define function in base class without implementation
+and force subclasses to do implementation instead, hence base class cannot be instantiated.
